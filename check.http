@@ -1,0 +1,13 @@
+GET localhost:8080/view/TestPage
+
+###
+GET localhost:8080/edit/MyPage
+
+###
+POST localhost:8080/save/MyPage
+content-type: application/x-www-form-urlencoded
+
+body=hi
+
+###
+GET localhost:8080/view/MyPage
