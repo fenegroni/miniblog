@@ -1,3 +1,3 @@
-module fenegroni.github.com/webapp
+module fenegroni.github.com/miniblog
 
-go 1.18
+go 1.19
