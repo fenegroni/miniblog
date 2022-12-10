@@ -69,12 +69,12 @@ func handleView(w http.ResponseWriter, r *http.Request, title string) {
 	renderTemplate(w, pages["/view/"], p)
 }
 
-func handleView500(w http.ResponseWriter, _ *http.Request, title string) {
+func handleView500(w http.ResponseWriter, _ *http.Request, _ string) {
 	log.Printf("Returning error 500")
 	http.Error(w, "500", http.StatusInternalServerError)
 }
 
-func handleEdit(w http.ResponseWriter, r *http.Request, title string) {
+func handleEdit(w http.ResponseWriter, _ *http.Request, title string) {
 	p, err := loadPage(title)
 	if err != nil {
 		p = &Page{Title: title}
